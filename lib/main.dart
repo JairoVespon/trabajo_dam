@@ -55,6 +55,7 @@ class _MyPageState extends State<MyApp> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("GestureDetector"),
             GestureDetector(
               onTap: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=> NewScreen(),));
@@ -66,12 +67,13 @@ class _MyPageState extends State<MyApp> {
                 width: 100,
                 child: Text('Presiona...'),
                 decoration: BoxDecoration(
-                  color: Colors.blueAccent,
+                  color: Colors.indigo,
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(width: 1, color: Colors.black),
                 ),
               ),
             ),
+            Text("InkWell"),
             InkWell(
               onDoubleTap: changeColorIndex,
               child: Container(
@@ -87,6 +89,7 @@ class _MyPageState extends State<MyApp> {
                 ),
               ),
             ),
+            Text("onTap"),
             GestureDetector(
               onTap: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Toque(),));
