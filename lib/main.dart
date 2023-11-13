@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trabajo_dam/nsft.dart';
+import 'package:trabajo_dam/ontp.dart';
 import 'dart:math';
 
 void main() {
@@ -31,19 +32,19 @@ class _MyPageState extends State<MyApp> {
   var random = Random();
   List<Color> myColors = [
     Colors.green,
-    Colors.blueAccent,
-    Colors.amberAccent,
-    Colors.tealAccent,
-    Colors.redAccent,
-    Colors.pinkAccent,
-    Colors.purpleAccent,
-    Colors.yellowAccent,
-    Colors.cyanAccent,
-    Colors.orangeAccent,
+    Colors.blue,
+    Colors.amber,
+    Colors.grey,
+    Colors.red,
+    Colors.pink,
+    Colors.purple,
+    Colors.yellow,
+    Colors.cyan,
+    Colors.orange,
   ];
   void changeColorIndex (){
     setState(() {
-      index = random.nextInt(5);
+      index = random.nextInt(10);
     });
   }
 
@@ -86,6 +87,23 @@ class _MyPageState extends State<MyApp> {
                 ),
               ),
             ),
+            GestureDetector(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Toque(),));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.all(5),
+                height: 100,
+                width: 100,
+                child: Text('Sig.'),
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(width: 1, color: Colors.black),
+                ),
+              ),
+            )
           ],
         ),
       )
