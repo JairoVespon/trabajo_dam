@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
-
 import 'package:trabajo_dam/nsft.dart';
+import 'dart:math';
 
 void main() {
   runApp(MyApp0());
