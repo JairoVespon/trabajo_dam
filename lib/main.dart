@@ -72,6 +72,21 @@ class _MyPageState extends State<MyApp> {
                 ),
               ),
             ),
+            InkWell(
+              onDoubleTap: changeColorIndex,
+              child: Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.all(5),
+                height: 100,
+                width: 100,
+                child: Text('Presiona...'),
+                decoration: BoxDecoration(
+                  color:myColors[index],
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(width: 1, color: Colors.black),
+                ),
+              ),
+            ),
           ],
         ),
       )
